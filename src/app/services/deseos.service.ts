@@ -9,6 +9,11 @@ export class DeseosService {
   listas :Lista[]=[];
 
   constructor() {
-    console.log("SVC init");
+    const lista1=new Lista("Recolectar piedras");
+    const lista2=new Lista("Recolectar agua");
+
+    this.listas.push(lista1, lista2);
+
+
   }
 }
