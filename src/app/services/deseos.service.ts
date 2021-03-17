@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 import { Lista } from '../models/lista.model';
 
 @Injectable({
@@ -8,7 +9,7 @@ export class DeseosService {
 
   listas :Lista[]=[];
 
-  constructor() {
+  constructor(private alertCtrl:AlertController) {
     // const lista1=new Lista("Recolectar piedras");
     // const lista2=new Lista("Recolectar agua");
 
@@ -32,6 +33,7 @@ export class DeseosService {
     });
     this.guardarStorage();
   }
+
 
   obtenerLista(id:string|number){
     id=Number(id);
