@@ -22,4 +22,9 @@ export class ListasComponent implements OnInit {
     else this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
   }
 
+  borrarLista(lista: Lista){
+    this.svc.borrarLista(lista);
+    console.log("Borrando "+lista.titulo+"...");
+  }
+
 }
