@@ -31,6 +31,10 @@ export class DeseosService {
     return this.listas.find(listaData=> listaData.id===id);
   }
 
+  listaSeleccionada(lista:Lista){
+    return lista;
+  }
+
   guardarStorage(){
     localStorage.setItem('data', JSON.stringify(this.listas));
   }
