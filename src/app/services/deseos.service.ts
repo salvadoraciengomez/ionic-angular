@@ -30,6 +30,7 @@ export class DeseosService {
     this.listas=this.listas.filter(listaData=>{
       return listaData.id!== lista.id;
     });
+    this.guardarStorage();
   }
 
   obtenerLista(id:string|number){
